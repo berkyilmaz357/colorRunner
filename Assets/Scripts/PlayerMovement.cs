@@ -6,12 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     [Header("Speed Variables")]
-    [SerializeField] private float runSpeed = 3;
+    [SerializeField] private float runSpeed = 3f;
     [SerializeField] private float changeLaneSpeed = 3;
+    [SerializeField] private float slowedSpeed = 1f;
+    [SerializeField] private float normalSpeed = 3f;
+    private bool isInBox = false;
     void Start()
     {
         //Start running
-        GetComponent<Rigidbody>().velocity = new Vector3(0, 0, runSpeed);
+        SetSpeed(normalSpeed);
 
 
     }
@@ -34,5 +37,41 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("SlowBox"))
+        {
+            isInBox = true;
+            SetSpeed(slowedSpeed);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("SlowBox"))
+        {
+            isInBox = false;
+            SetSpeed(normalSpeed);
+        }
+    }
+    void SetSpeed(float speed)
+    {
+        if (isInBox)
+        {
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, runSpeed);
+
+
+        }
+        else
+        {
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, runSpeed);
+        }
+
+
+
 
     }
+
+
+
+}
