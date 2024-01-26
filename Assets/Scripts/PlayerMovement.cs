@@ -24,13 +24,13 @@ public class PlayerMovement : MonoBehaviour
     
         void Update()
         {
-            // A tuþuna basýldýðýnda sola hareket
+            
             if (Input.GetKey("a"))
             {
                 transform.Translate((Time.deltaTime * -changeLaneSpeed), 0, 0);
             }
 
-            // D tuþuna basýldýðýnda saða hareket
+            
             if (Input.GetKey("d"))
             {
                 transform.Translate((Time.deltaTime * changeLaneSpeed), 0, 0);

@@ -18,7 +18,7 @@ public class SlowDownZone : MonoBehaviour
 
     void Update()
     {
-        // Karakter hareket kodlarý buraya eklenebilir
+        
     }
 
     private void OnTriggerEnter(Collider other)

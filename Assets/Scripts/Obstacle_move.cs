@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Obstacle_move : MonoBehaviour
 {
-    public float rotationSpeed = 5f; // Dönme hýzý
+    public float rotationSpeed = 5f; 
 
     void Update()
     {
-        // Objeyi kendi ekseni etrafýnda döndür
+        
         transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
     }
 }

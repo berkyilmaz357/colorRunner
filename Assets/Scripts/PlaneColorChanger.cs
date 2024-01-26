@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlaneColorChanger : MonoBehaviour
 {
-    private Color planeColor; // Plane'in orijinal rengini saklamak için
+    private Color planeColor; 
 
     private void Start()
     {
-        // Plane'in orijinal rengini al
+        
         Renderer planeRenderer = GetComponent<Renderer>();
         if (planeRenderer != null)
         {
@@ -18,12 +18,12 @@ public class PlaneColorChanger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Cylinder")) // Eðer temas eden obje "Player" etiketine sahipse
+        if (other.CompareTag("Cylinder")) 
         {
             Renderer playerRenderer = other.GetComponent<Renderer>();
             if (playerRenderer != null)
             {
-                // Karakterin rengini Plane'in orijinal rengiyle deðiþtir
+                
                 playerRenderer.material.color = planeColor;
             }
         }
