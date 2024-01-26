@@ -7,11 +7,14 @@ TagManager:
   - Cylinder
   - enemyCyl
   - SlowBox
+  - Spike
+  - delete
+  - GO
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - CYA
   - Water
   - UI
   - 

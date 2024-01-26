@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("SlowBox"))
         {
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    public void OnTriggerExit(Collider other)
     {
         if(other.CompareTag("SlowBox"))
         {
