@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlaneColorChanger : MonoBehaviour
 {
-    private Color planeColor; 
+    [SerializeField] private Color planeColor; 
 
     private void Start()
     {

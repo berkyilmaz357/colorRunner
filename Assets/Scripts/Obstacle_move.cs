@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Obstacle_move : MonoBehaviour
 {
-    public float rotationSpeed = 5f; 
+    [SerializeField] public float rotationSpeed = 5f; 
 
     void Update()
     {
